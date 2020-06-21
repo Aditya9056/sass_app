@@ -1,0 +1,43 @@
+// SASS Variables
+$primary: #0e6cff;
+$secondary: rgb(53, 179, 221);
+$ternary: rgb(255, 166, 0);
+$font: sans-serif;
+$font-color: rgba(255, 255, 255, 0);
+
+// SASS Map
+$font-weight: (
+    "regular": 100,
+    "medium": 500,
+    "bold": 900
+);
+
+// Function
+@function set-text-color($font-color){
+    @if(lightness($font-color) > 70) {
+
+        @return #333333;
+
+    } @else {
+        @return #ffffff;
+    }
+}
+
+// Mixin
+@mixin set_color($font-color) {
+    background-color: $font-color;
+    color: set-text-color($font-color);
+}
+
+// Each Loop
+$marginlist: (1,2);
+
+@each $margin in $marginlist {
+    
+    .my-#{$margin} {
+        margin: #{$margin}rem;
+    }
+}
+
+
+@import 'mobile';

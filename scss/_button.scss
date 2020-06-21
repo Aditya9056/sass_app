@@ -1,0 +1,14 @@
+button {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 5px;
+    margin: 30px;
+    border: 0px;
+    color: white;
+    background-color: lighten($primary, 10%);
+
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+}

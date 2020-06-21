@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* CSS Variable
+:root {
+    --primary-color: brown;
+}
+body {
+    background-color: var(--primary-color);
+} */
+
+/* This way I can make boilerplate files for parts of my website. */
+@import 'config';
+@import 'button';
+
+body {
+    font-family: $font;
+    font-weight: map-get($font-weight, medium);
+    @include set_color($font-color);
+}
+
+//Nesting 
+.content{
+    span{
+        color: $secondary;
+
+        li:hover{
+            color: $ternary;
+            cursor: pointer;
+        }
+    }
+}
